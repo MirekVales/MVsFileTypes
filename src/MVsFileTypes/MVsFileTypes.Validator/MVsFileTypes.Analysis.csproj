@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Mirek Vales</Authors>
+    <Copyright>Mirek Vales 2020</Copyright>
+    <IconUrl>https://raw.githubusercontent.com/MirekVales/MVsFileTypes/master/src/MVsFileTypes/package.png</IconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/MirekVales/MVsFileTypes/master/src/MVsFileTypes/package.png</PackageIconUrl>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\Build</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\Build</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="package.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MVsFileTypes.Contracts\MVsFileTypes.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
