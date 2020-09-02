@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MVsFileTypes.Predefined\MVsFileTypes.Predefined.csproj" />
-    <ProjectReference Include="..\MVsFileTypes.Validator\MVsFileTypes.Analysis.csproj" />
+    <ProjectReference Include="..\MVsFileTypes.Analysis\MVsFileTypes.Analysis.csproj" />
   </ItemGroup>
 
 </Project>

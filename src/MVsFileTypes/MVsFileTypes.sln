@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVsFileTypes.Contracts", "MVsFileTypes.Contracts\MVsFileTypes.Contracts.csproj", "{47DA3588-6BCF-4DD6-8560-869931E089D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVsFileTypes.Analysis", "MVsFileTypes.Validator\MVsFileTypes.Analysis.csproj", "{4DD3E71B-A4F2-41CF-93AB-9ADF3AFC31A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVsFileTypes.Analysis", "MVsFileTypes.Analysis\MVsFileTypes.Analysis.csproj", "{4DD3E71B-A4F2-41CF-93AB-9ADF3AFC31A4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVsFileTypes.Predefined", "MVsFileTypes.Predefined\MVsFileTypes.Predefined.csproj", "{3822FCFA-BEDE-4778-93B3-FADD0E1F2FF4}"
 EndProject
