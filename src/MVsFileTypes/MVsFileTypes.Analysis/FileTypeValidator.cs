@@ -1,7 +1,6 @@
 ﻿using MVsFileTypes.Contracts.Validation;
 using MVsFileTypes.Analysis;
 using MVsFileTypes.Contracts.Collections;
-using MVsFileTypes.Contracts.Validation;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

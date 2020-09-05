@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using MVsFileTypes.Contracts;
 using System.Collections.Generic;
 using MVsFileTypes.Contracts.Collections;
 

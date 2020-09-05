@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using MVsFileTypes.Predefined.FileTypes;
 using MVsFileTypes.Contracts.Collections;
-using MVsFileTypes.Predefined.FileTypes;
-using MVsFileTypes.Contracts.Collections;
 
 namespace MVsFileTypes.Predefined.Lists
 {
@@ -21,6 +19,7 @@ namespace MVsFileTypes.Predefined.Lists
             yield return PowerShell.Get();
             yield return Python.Get();
             yield return Security.Get();
+            yield return SystemFiles.Get();
             yield return TextFormatted.Get();
             yield return TextPlain.Get();
             yield return WebDocuments.Get();

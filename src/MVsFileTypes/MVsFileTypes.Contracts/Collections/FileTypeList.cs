@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
-using MVsFileTypes.Contracts.Collections;
 
 namespace MVsFileTypes.Contracts.Collections
 {
@@ -24,14 +23,28 @@ namespace MVsFileTypes.Contracts.Collections
             };
 
         public FileTypeList Filter(IEnumerable<string> fileExtensions, FilterOptions filterOptions)
-            => new FileTypeList()
+        {
+            var list = new FileTypeList()
             {
                 Name = Name,
                 Description = Description,
                 Groups = Groups
-                    .Select(g => g.Filter(fileExtensions, filterOptions))
+                    .Select(g => g.Filter(fileExtensions, FilterOptions.None))
                     .Where(g => g.FileTypes.Any())
                     .ToArray()
             };
+
+            if (filterOptions == FilterOptions.ThrowOnNotFoundItems)
+            {
+                var diff = fileExtensions.Where(
+                    extension => list.Groups
+                    .All(group => group.FileTypes.All(type => !type.Extension.Matches(extension))))
+                    .ToArray();
+                if (diff.Any())
+                    throw Throwable.ExtensionNotFound(diff.Length, diff.FirstOrDefault());
+            }
+
+            return list;
+        }
     }
 }

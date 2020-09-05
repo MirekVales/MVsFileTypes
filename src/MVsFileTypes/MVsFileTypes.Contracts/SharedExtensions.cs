@@ -1,6 +1,4 @@
-﻿using MVsFileTypes.Contracts;
-
-namespace MVsFileTypes.Contracts
+﻿namespace MVsFileTypes.Contracts
 {
     public static class SharedExtensions
     {

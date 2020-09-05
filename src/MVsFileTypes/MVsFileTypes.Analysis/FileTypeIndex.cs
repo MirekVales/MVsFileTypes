@@ -1,8 +1,6 @@
 ﻿using System.Linq;
 using MVsFileTypes.Contracts;
-using MVsFileTypes.Contracts;
 using System.Collections.Generic;
-using MVsFileTypes.Contracts.Collections;
 using MVsFileTypes.Contracts.Collections;
 
 namespace MVsFileTypes.Analysis

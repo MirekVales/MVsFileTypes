@@ -5,7 +5,6 @@ using MVsFileTypes.Contracts;
 using MVsFileTypes.Contracts.Validation;
 using MVsFileTypes.Predefined.FileTypes;
 using MVsFileTypes.Contracts.Collections;
-using MVsFileTypes.Contracts.Collections;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MVsFileTypes.UnitTests

@@ -1,6 +1,5 @@
 ﻿using MVsFileTypes.Contracts;
 using MVsFileTypes.Contracts.Collections;
-using MVsFileTypes.Contracts;
 using System.Collections.Generic;
 
 namespace MVsFileTypes.Predefined.FileTypes

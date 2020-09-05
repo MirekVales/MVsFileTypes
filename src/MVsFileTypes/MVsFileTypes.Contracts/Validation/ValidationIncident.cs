@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using MVsFileTypes.Contracts.Validation;
 using MVsFileTypes.Contracts.Collections;
 
 namespace MVsFileTypes.Contracts.Validation

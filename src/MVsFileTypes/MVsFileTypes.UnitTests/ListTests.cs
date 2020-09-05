@@ -13,6 +13,7 @@ namespace MVsFileTypes.UnitTests
         public void FiltersList()
         {
             // Arrange
+
             var list = PredefinedFileTypes.Get();
             var toRemove = list
                 .Groups
@@ -21,6 +22,7 @@ namespace MVsFileTypes.UnitTests
                 .ToArray();
 
             // Act
+
             var newList = list.Filter(toRemove, FilterOptions.None);
 
             // Assert
@@ -29,19 +31,30 @@ namespace MVsFileTypes.UnitTests
         }
 
         [TestMethod]
-        public void ThrowsOnNotFoundInFiltering()
+        [DataRow(FilterOptions.ThrowOnNotFoundItems, true)]
+        [DataRow(FilterOptions.None, false)]
+        public void ThrowsOnNotFoundInFiltering(FilterOptions option, bool shouldThrow)
         {
             // Arrange
+
             var list = PredefinedFileTypes.Get();
-            var toRemove = list
+            var filter = list
                 .Groups
                 .Take(3)
                 .Select(g => g.FileTypes.First().Extension.FileExtensions.First())
                 .Concat(new[] { "nonExistingExtension" })
                 .ToArray();
 
+            // Act
+
+            void action() => list.Filter(filter, option);
+
             // Assert
-            Assert.ThrowsException<KeyNotFoundException>(() => list.Filter(toRemove, FilterOptions.ThrowOnNotFoundItems));
+
+            if (shouldThrow)
+                Assert.ThrowsException<KeyNotFoundException>(action);
+            else
+                action();
         }
     }
 }

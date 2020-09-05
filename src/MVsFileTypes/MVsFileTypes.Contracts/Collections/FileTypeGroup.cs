@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
-using MVsFileTypes.Contracts.Collections;
 
 namespace MVsFileTypes.Contracts.Collections
 {
@@ -25,7 +24,7 @@ namespace MVsFileTypes.Contracts.Collections
                 {
                     var diff = extensions.Where(e => !matched.Any(m => m.Extension.Matches(e))).ToArray();
                     if (diff.Length > 0)
-                        throw new KeyNotFoundException($"{diff.Length} extension(s) was not found in list. E.g. {diff.FirstOrDefault()}");
+                        throw Throwable.ExtensionNotFound(diff.Length, diff.FirstOrDefault());
                 }
 
                 return matched;
