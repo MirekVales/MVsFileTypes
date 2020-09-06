@@ -12,6 +12,7 @@ namespace MVsFileTypes.Contracts
         Bzip2 = 4,
         GZip = 8,
         Tar = 16,
+        Rar = 32,
 
         CompoundFileBinary = 2048,
         PDF = 4096,
